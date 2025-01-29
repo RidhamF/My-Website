@@ -13,7 +13,7 @@ from flask_bootstrap import Bootstrap4
 
 app = Flask(__name__)
 app.secret_key = "this-is-a-secret-key"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://data_um80_user:UWuJ2YKI7EQb1tkCHpaaSYfjM0wuJrHY@dpg-cucvp3dumphs73ddt7ag-a/data_um80"
 bootstrap = Bootstrap4()
 bootstrap.init_app(app)
 #TODO : Establishing a login system:
