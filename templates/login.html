@@ -1,0 +1,21 @@
+{% include 'header.html' %}{% from 'bootstrap4/form.html' import render_form %}
+<main class="mb-4">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+          <h1>Sign In</h1>
+        {{render_form(form, novalidate=True, button_map={"submit": "dark"}) }}
+          {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes style="list-style-type: none;">
+    {% for message in messages %}
+      <li style="color:red;text-align:center">{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+      </div>
+    </div>
+  </div>
+</main>
